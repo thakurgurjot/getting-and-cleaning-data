@@ -68,7 +68,9 @@ For each record in the dataset it is provided:
  # section 2 - extract only the measurements on the mean and standard 
    deviation for each measurement.
  -read dataFeatures and extract mean and std using grep function 
+ 
  -take measurements for mean and std and adding "Sub" and "ActNum" using union function - dataFeaturesMeanStd
+ 
  -form a new dataTable taking a subset of the previous dataTable selecting dataFeaturesMeanStd
  
  
@@ -78,8 +80,9 @@ For each record in the dataset it is provided:
  
  # section 4 - Appropriately label the dataset with descriptive variable names
  
- using the gsub function labels are renamed descritively. for eg.
- names(dataTable)<-gsub("std()", "SD", names(dataTable))
+ using the gsub function labels are renamed descritively. 
+ for eg. names(dataTable)<-gsub("std()", "SD", names(dataTable))
+ 
  names(dataTable)<-gsub("Acc", "Accelerometer", names(dataTable))
  
  #section 5 - create an independent tidy dataset with the average of each variable for each activity and each subject.
